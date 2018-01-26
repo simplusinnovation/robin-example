@@ -3,6 +3,10 @@ import {Form, Input, Button} from 'antd'
 import {FormComponentProps} from "antd/lib/form/Form";
 const FormItem = Form.Item
 
+import {robins} from '../robin'
+
+const {posts, postsCol} = robins
+
 export const PostForm = Form.create()(class PostForm extends React.Component<FormComponentProps>{
 
     render(){
@@ -21,6 +25,8 @@ export const PostForm = Form.create()(class PostForm extends React.Component<For
 
         return <Form onSubmit={ evt => {
             evt.preventDefault();
+
+            postsCol.create(this.props.form.getFieldsValue())
         }}>
             <FormItem {...formItemLayout} label="Author">
             {getFieldDecorator('author')(<Input type="text"/>)}
