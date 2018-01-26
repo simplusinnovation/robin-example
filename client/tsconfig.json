@@ -1,0 +1,15 @@
+{
+    "version": "2.5.1",
+    "compilerOptions": {
+        "target" : "es5",
+        "module": "commonjs",
+        "outDir": "build/",
+        "lib": ["es2016", "es2015", "dom", "webworker"],
+        "declaration": true,
+        "jsx": "react",
+        "experimentalDecorators": true
+    },
+    "files": [
+        "./app/index.tsx",
+    ]
+}

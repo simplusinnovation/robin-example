@@ -1,0 +1,15 @@
+{
+    "version": "2.5.1",
+    "compilerOptions": {
+        "target" : "es5",
+        "module": "commonjs",
+        "outDir": "build/",
+        "lib": ["es2017"],
+        "declaration": true,
+        "experimentalDecorators": true
+    },
+    "files": [
+        "./src/client/app/index.ts",
+        "./src/server/index.ts"
+    ]
+}

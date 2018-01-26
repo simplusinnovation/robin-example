@@ -1,0 +1,25 @@
+{
+  "name": "@simplus/robin-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "run-p server client",
+    "server": "npm run start --prefix server",
+    "client": "npm run start --prefix client",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/simplusinnovation/robin-example.git"
+  },
+  "author": "Yehudi Hollevoet",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/simplusinnovation/robin-example/issues"
+  },
+  "homepage": "https://github.com/simplusinnovation/robin-example#readme",
+  "dependencies": {
+    "npm-run-all": "^4.1.2"
+  }
+}
