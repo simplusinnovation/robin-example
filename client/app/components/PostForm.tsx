@@ -1,9 +1,6 @@
 import * as React from "react"
 import {Form, Input, Button} from 'antd'
 import {FormComponentProps} from "antd/lib/form/Form";
-import {robins} from '../robin'
-
-const {test} = robins
 const FormItem = Form.Item
 
 export const PostForm = Form.create()(class PostForm extends React.Component<FormComponentProps>{
@@ -23,9 +20,7 @@ export const PostForm = Form.create()(class PostForm extends React.Component<For
           }
 
         return <Form onSubmit={ evt => {
-            evt.preventDefault()
-
-            test.post('posting', '/', this.props.form.getFieldsValue())
+            evt.preventDefault();
         }}>
             <FormItem {...formItemLayout} label="Author">
             {getFieldDecorator('author')(<Input type="text"/>)}

@@ -47,7 +47,7 @@ export function reducer(state, action) {
     return state
 }  
 ```
-
+On Robin there is also a way to handle states and it works the same way. However robins have already some preset logic and for the case of making requests it's already there 
 
 #### Second : We need to create some actions
 
@@ -70,6 +70,9 @@ export function get(url) {
 }
 
 ```
+
+A robin has a concept of microservice, in which some actions are defined, and which handles its own state.
+A lot of actions are predefined (as the example one)
 
 #### Third : We need to configure the app
 
@@ -103,6 +106,8 @@ ReactDOM.render(
   );
 ```
 
+On Robin there is no need to make the link to your app. The link will be made whe you connect to a component
+
 #### Fourth : We need to read the state from our component and trigger some events
 The last step consist to finaly use everything that was created
 
@@ -135,5 +140,32 @@ export class MyComponent extends React.Component{
     }
 }
 ```
+On robin you don't bind the compoent to the state, but to a microservice (this causes a bit more refreshes, however this will be optimized later)
+you also don't need to know how the state is stored, you just ask for the result that was requested
 
 
+## 3 ) The concepts of robin
+
+#### A Robin
+
+A robin is a microservice that contains a bunch of methods and that manages its own state, the simpliest robin is the Robin class, its purpose is mainly to make API calls
+
+#### A request key
+
+Robins associate requests to keys, and the Status, Error, and Result can be get for that same key
+
+#### A RobinProvider
+
+The robin provider allows to attach subscribers to the robin library. An example of subscriber is the RobinReact from @simplus/robin-react that attaches Robin to React
+
+
+## 4 ) Exercice
+
+We have an api that handles Posts,
+we want to use all the features offered by that api to make a posting applcation (it's useless, absolutely useless)
+
+#### 1 - Download the exercice
+#### 2 - Bind the app to logic 
+#### 3 - Make the app refresh itself when creating a new post (use of Collections)
+#### 5 - Have different view on the same data (use scopes)
+#### 6 - Abstracting the api calls (create your own robin)
